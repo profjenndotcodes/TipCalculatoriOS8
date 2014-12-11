@@ -31,16 +31,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func stepperChanged(sender: AnyObject) {
-        lblPercent.text = String(format: "%.0f%%", percentStepper.value*100)
-    }
-    
+
     @IBAction func btnCalc(sender: AnyObject){
         totalBill = (txtAmount.text as NSString).doubleValue * percentStepper.value
         lblTotal.text = String(format: "$%.2f",totalBill)
         
     }
 
+    @IBAction func stepperChanged(sender: AnyObject) {
+        lblPercent.text = String(format: "%.0f%%", percentStepper.value*100)
+    }
+    
+
 
 }
-
